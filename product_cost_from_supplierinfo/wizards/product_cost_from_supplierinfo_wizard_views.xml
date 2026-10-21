@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Renzo Payero, DakoDev
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="product_cost_from_supplierinfo_wizard_view_form" model="ir.ui.view">
+        <field name="name">product.cost.from.supplierinfo.wizard.form</field>
+        <field name="model">product.cost.from.supplierinfo.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Cost from Vendor Prices">
+                <field name="state" invisible="1" />
+                <field name="source" invisible="1" />
+                <field name="company_id" invisible="1" />
+                <field name="selection_truncated" invisible="1" />
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    invisible="not selection_truncated"
+                >
+                    The selection was cut at the maximum number of records that a list sends at once. Narrow the filter and repeat with the rest.
+                </div>
+                <div class="alert alert-info" role="alert">
+                    <field name="selection_summary" class="fw-bold" />
+                </div>
+                <div class="alert alert-warning" role="alert" invisible="not pos_warning">
+                    <field name="pos_warning" />
+                </div>
+                <group invisible="state != 'config'">
+                    <group>
+                        <field
+                            name="company_id"
+                            groups="base.group_multi_company"
+                            options="{'no_create': True}"
+                        />
+                        <field name="quantity" invisible="source != 'product'" />
+                        <field name="pricelist_id" options="{'no_create': True}" />
+                        <field name="threshold" />
+                    </group>
+                </group>
+                <group invisible="state != 'preview'">
+                    <group>
+                        <field name="count_update" />
+                        <field name="count_flagged" />
+                    </group>
+                    <group>
+                        <field name="count_unchanged" />
+                        <field name="count_skip" />
+                    </group>
+                </group>
+                <field name="line_ids" nolabel="1" invisible="state != 'preview'">
+                    <list
+                        editable="bottom"
+                        create="0"
+                        delete="0"
+                        decoration-warning="warning_level == '2'"
+                        decoration-muted="state in ('skip', 'unchanged')"
+                    >
+                        <field name="warning_level" column_invisible="1" />
+                        <field name="flagged" column_invisible="1" />
+                        <field
+                            name="apply"
+                            widget="boolean_toggle"
+                            readonly="state != 'update'"
+                        />
+                        <field name="product_id" />
+                        <field name="default_code" optional="show" />
+                        <field name="partner_id" optional="show" />
+                        <field name="vendor_price" optional="show" />
+                        <field name="vendor_currency_id" optional="hide" />
+                        <field name="discount" optional="show" />
+                        <field name="vendor_uom_id" optional="hide" />
+                        <field name="current_cost" />
+                        <field name="new_cost" invisible="state == 'skip'" />
+                        <field name="change_pct" invisible="state == 'skip'" />
+                        <field
+                            name="current_sale_price"
+                            column_invisible="not parent.pricelist_id"
+                            invisible="state == 'skip'"
+                        />
+                        <field
+                            name="new_sale_price"
+                            column_invisible="not parent.pricelist_id"
+                            invisible="state == 'skip'"
+                        />
+                        <field
+                            name="sale_change_pct"
+                            column_invisible="not parent.pricelist_id"
+                            invisible="state == 'skip'"
+                            optional="show"
+                        />
+                        <field name="state" />
+                        <field name="message" />
+                    </list>
+                </field>
+                <footer>
+                    <button
+                        name="action_preview"
+                        string="Preview"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state != 'config'"
+                        data-hotkey="q"
+                    />
+                    <button
+                        name="action_apply"
+                        string="Apply"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state != 'preview'"
+                        confirm="Write the new cost on the selected products? The change is recorded in Cost Updates, where it can be reverted."
+                        data-hotkey="q"
+                    />
+                    <button
+                        name="action_back"
+                        string="Back"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="state != 'preview'"
+                    />
+                    <button
+                        name="action_select_all"
+                        string="Select all"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="state != 'preview'"
+                    />
+                    <button
+                        name="action_select_none"
+                        string="Select none"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="state != 'preview'"
+                    />
+                    <button
+                        name="action_unselect_flagged"
+                        string="Unselect flagged"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="state != 'preview' or not count_flagged"
+                    />
+                    <button
+                        string="Discard"
+                        class="btn-secondary"
+                        special="cancel"
+                        data-hotkey="x"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- The same wizard from the vendor prices (it takes the selected rows) and
+         from the products (it takes the main vendor of each product). -->
+    <record id="action_product_cost_from_supplierinfo_supplierinfo" model="ir.actions.act_window">
+        <field name="name">Take Cost from Vendor Price</field>
+        <field name="res_model">product.cost.from.supplierinfo.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="product_cost_from_supplierinfo_wizard_view_form" />
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="product.model_product_supplierinfo" />
+        <field name="binding_view_types">list</field>
+        <field name="group_ids" eval="[Command.link(ref('product.group_product_manager'))]" />
+    </record>
+
+    <record id="action_product_cost_from_supplierinfo_template" model="ir.actions.act_window">
+        <field name="name">Take Cost from Vendor Price</field>
+        <field name="res_model">product.cost.from.supplierinfo.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="product_cost_from_supplierinfo_wizard_view_form" />
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="product.model_product_template" />
+        <field name="binding_view_types">list</field>
+        <field name="group_ids" eval="[Command.link(ref('product.group_product_manager'))]" />
+    </record>
+
+    <record id="action_product_cost_from_supplierinfo_product" model="ir.actions.act_window">
+        <field name="name">Take Cost from Vendor Price</field>
+        <field name="res_model">product.cost.from.supplierinfo.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="product_cost_from_supplierinfo_wizard_view_form" />
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="product.model_product_product" />
+        <field name="binding_view_types">list</field>
+        <field name="group_ids" eval="[Command.link(ref('product.group_product_manager'))]" />
+    </record>
+</odoo>

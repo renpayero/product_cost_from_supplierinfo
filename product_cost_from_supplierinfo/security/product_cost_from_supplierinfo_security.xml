@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Renzo Payero, DakoDev
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="product_cost_from_supplierinfo_batch_rule_company" model="ir.rule">
+        <field name="name">Cost updates: multi-company</field>
+        <field name="model_id" ref="model_product_cost_from_supplierinfo_batch" />
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="product_cost_from_supplierinfo_batch_line_rule_company" model="ir.rule">
+        <field name="name">Cost update lines: multi-company</field>
+        <field name="model_id" ref="model_product_cost_from_supplierinfo_batch_line" />
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <!-- Each user only sees the previews he opened, with their costs and
+         vendor prices. -->
+    <record id="product_cost_from_supplierinfo_wizard_rule_user" model="ir.rule">
+        <field name="name">Cost from vendor prices: own previews</field>
+        <field name="model_id" ref="model_product_cost_from_supplierinfo_wizard" />
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+    </record>
+
+    <record id="product_cost_from_supplierinfo_wizard_line_rule_user" model="ir.rule">
+        <field name="name">Cost from vendor prices lines: own previews</field>
+        <field name="model_id" ref="model_product_cost_from_supplierinfo_wizard_line" />
+        <field name="domain_force">[('wizard_id.create_uid', '=', user.id)]</field>
+    </record>
+</odoo>

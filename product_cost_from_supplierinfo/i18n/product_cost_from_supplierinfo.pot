@@ -1,0 +1,857 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_cost_from_supplierinfo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260528\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-21 05:53+0000\n"
+"PO-Revision-Date: 2026-10-21 05:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_cost_from_supplierinfo_batch.py:0
+msgid "%(vendor)s · Products: %(count)s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__state
+msgid "Action"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Already applied"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Already had the new cost: %s."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_batch__state__done
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "Applied"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__user_id
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "Applied by"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__date
+msgid "Applied on"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__apply
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid "Apply"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Archived product"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Archived vendor"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid "Back"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__change_pct
+msgid "Change (%)"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_cost_from_supplierinfo_batch.py:0
+msgid "Changed by a later cost update"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Check the preview again."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__company_id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__company_id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__company_id
+msgid "Company"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard__state__config
+msgid "Configure"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_supplierinfo.py:0
+msgid "Converted from %s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_supplierinfo.py:0
+msgid "Converted from %s per %s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model,name:product_cost_from_supplierinfo.model_product_cost_from_supplierinfo_batch
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__batch_id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__batch_id
+msgid "Cost Update"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model,name:product_cost_from_supplierinfo.model_product_cost_from_supplierinfo_batch_line
+msgid "Cost Update Line"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.actions.act_window,name:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_action
+#: model:ir.ui.menu,name:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_menu
+msgid "Cost Updates"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Cost changed since the preview"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Cost changes by %s %%"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+#: model:ir.model,name:product_cost_from_supplierinfo.model_product_cost_from_supplierinfo_wizard
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid "Cost from Vendor Prices"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model,name:product_cost_from_supplierinfo.model_product_cost_from_supplierinfo_wizard_line
+msgid "Cost from Vendor Prices Line"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_cost_from_supplierinfo_batch.py:0
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Cost method is FIFO/AVCO"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_cost_from_supplierinfo_batch.py:0
+msgid "Cost modified after this change"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_cost_from_supplierinfo_batch.py:0
+msgid "Costs reverted"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Costs updated"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__create_uid
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__create_uid
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__create_uid
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__create_date
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__create_date
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__create_date
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__current_cost
+msgid "Current cost"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__current_sale_price
+msgid "Current sale price"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "Date"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid "Discard"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__discount
+msgid "Discount (%)"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__display_name
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__display_name
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__display_name
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__display_name
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_product__display_name
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_supplierinfo__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__threshold
+msgid "Flag changes above (%)"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__count_flagged
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__flagged
+msgid "Flagged"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_product__id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_supplierinfo__id
+msgid "ID"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Incompatible units of measure"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard_line__warning_level__1
+msgid "Info"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__default_code
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__default_code
+msgid "Internal Reference"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__write_uid
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__write_uid
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__write_uid
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__write_date
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__write_date
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__write_date
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__line_ids
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__line_ids
+msgid "Lines"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_batch__source__product
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard__source__product
+msgid "Main vendor of the selected products"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__message
+msgid "Message"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "My updates"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__name
+msgid "Name"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__new_cost
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__new_cost
+msgid "New cost"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__new_sale_price
+msgid "New sale price"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__count_unchanged
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard_line__state__unchanged
+msgid "No change"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.actions.act_window,help:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_action
+msgid "No cost update yet"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "No current cost"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "No exchange rate for %s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "No vendor price"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "No vendor price valid today for this company"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_supplierinfo.py:0
+msgid "Non-deductible tax added"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard_line__warning_level__0
+msgid "None"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Nothing to apply."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Nothing was applied"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_cost_from_supplierinfo_batch.py:0
+msgid "Nothing was reverted"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Only archived vendors"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,help:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__pricelist_id
+msgid ""
+"Optional: also show the current and the new sale price of each product in "
+"this pricelist."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_batch__state__partial
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "Partially reverted"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__pos_warning
+msgid "Point of sale warning"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard__state__preview
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid "Preview"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__old_cost
+msgid "Previous cost"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Price for a minimum of %s %s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__product_id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__product_id
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "Product"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model,name:product_cost_from_supplierinfo.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Product of another company"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__product_ids
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_form
+msgid "Products"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Products selected: %(products)s, variants: %(variants)s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Products selected: %s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,help:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__threshold
+msgid ""
+"Products whose cost changes by more than this percentage are flagged and "
+"left unselected, to be checked one by one."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__quantity
+msgid "Purchase quantity"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_form
+msgid ""
+"Put back the previous cost of these products? The products whose cost "
+"changed after this update are left as they are."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,help:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__quantity
+msgid ""
+"Quantity used to choose the vendor price of each product: the prices whose "
+"minimum quantity is above it are not used."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_form
+msgid "Revert"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__revert_note
+msgid "Revert Note"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__reverted
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_batch__state__reverted
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "Reverted"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__revert_user_id
+msgid "Reverted by"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__revert_date
+msgid "Reverted on"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_cost_from_supplierinfo_batch.py:0
+msgid "Reverted products: %(reverted)s. Products left as they are: %(left)s."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__sale_change_pct
+msgid "Sale price change (%)"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__pricelist_id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__pricelist_id
+msgid "Sale price in"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid "Select all"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Select at least one vendor price or product."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid "Select none"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.actions.act_window,help:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_action
+msgid ""
+"Select vendor prices or products in their list and use <i>Take Cost from "
+"Vendor Price</i> in the Actions menu. Every update is recorded here and can "
+"be reverted."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_batch__source__supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard__source__supplierinfo
+msgid "Selected vendor prices"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__selection_summary
+msgid "Selection"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__selection_truncated
+msgid "Selection Truncated"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_cost_from_supplierinfo_batch.py:0
+msgid "Several vendors"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid ""
+"Several vendors share the first position (%s): the vendor was chosen by list"
+" order. Set the order of the vendors of the product."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard_line__state__skip
+msgid "Skip"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__count_skipped
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__count_skip
+msgid "Skipped"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Skipped because their cost changed since the preview: %s."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Skipped because their cost method is FIFO/AVCO: %s."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__source
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__source
+msgid "Source"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__state
+msgid "State"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__state
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "Status"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model,name:product_cost_from_supplierinfo.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.actions.act_window,name:product_cost_from_supplierinfo.action_product_cost_from_supplierinfo_product
+#: model:ir.actions.act_window,name:product_cost_from_supplierinfo.action_product_cost_from_supplierinfo_supplierinfo
+#: model:ir.actions.act_window,name:product_cost_from_supplierinfo.action_product_cost_from_supplierinfo_template
+msgid "Take Cost from Vendor Price"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/models/product_supplierinfo.py:0
+msgid "Taxes included in the price removed"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "The cost would be negative"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "The costs of this preview were already applied:"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid ""
+"The first vendor of the product, %s, has no price valid today for this "
+"quantity; %s is used."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "The main vendor of this product is %s."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "The purchase quantity must be greater than zero."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "The sale price does not depend on the cost"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "The selected products already had the new cost."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid ""
+"The selection was cut at the maximum number of records that a list sends at "
+"once. Narrow the filter and repeat with the rest."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "The threshold cannot be negative."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid ""
+"These points of sale have an open session: %s. After this update, opening "
+"one of them from the Point of Sale dashboard, or starting a new session, "
+"reloads all its data and deletes, in that browser, every order not yet sent "
+"to the server: the order in progress, the open orders not saved for later "
+"(with the upload button of the order) and the paid orders that could not be "
+"sent. To get the new costs, and the prices based on them, finish or save "
+"those orders, then open the point of sale again from the dashboard. "
+"Refreshing the page (F5) does not reload anything."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__count_update
+msgid "To update"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__count_unchanged
+msgid "Unchanged"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid "Unselect flagged"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard_line__state__update
+msgid "Update"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch__count_updated
+msgid "Updated"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Updated costs: %s."
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__partner_id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__partner_id
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_batch_view_search
+msgid "Vendor"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_batch_line__supplierinfo_id
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__supplierinfo_id
+msgid "Vendor Price"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard__supplierinfo_ids
+msgid "Vendor Prices"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__vendor_currency_id
+msgid "Vendor currency"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__vendor_price
+msgid "Vendor price"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Vendor price is zero"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Vendor price not valid today (%s → %s)"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Vendor price of another company"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Vendor prices selected for this product: %s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Vendor prices selected: %s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#. odoo-python
+#: code:addons/product_cost_from_supplierinfo/wizards/product_cost_from_supplierinfo_wizard.py:0
+msgid "Vendor prices start at a minimum quantity of %s"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__vendor_uom_id
+msgid "Vendor unit"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields.selection,name:product_cost_from_supplierinfo.selection__product_cost_from_supplierinfo_wizard_line__warning_level__2
+msgid "Warning"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__warning_level
+msgid "Warning Level"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model:ir.model.fields,field_description:product_cost_from_supplierinfo.field_product_cost_from_supplierinfo_wizard_line__wizard_id
+msgid "Wizard"
+msgstr ""
+
+#. module: product_cost_from_supplierinfo
+#: model_terms:ir.ui.view,arch_db:product_cost_from_supplierinfo.product_cost_from_supplierinfo_wizard_view_form
+msgid ""
+"Write the new cost on the selected products? The change is recorded in Cost "
+"Updates, where it can be reverted."
+msgstr ""

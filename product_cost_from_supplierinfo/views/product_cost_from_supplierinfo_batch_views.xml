@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Renzo Payero, DakoDev
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="product_cost_from_supplierinfo_batch_view_list" model="ir.ui.view">
+        <field name="name">product.cost.from.supplierinfo.batch.list</field>
+        <field name="model">product.cost.from.supplierinfo.batch</field>
+        <field name="arch" type="xml">
+            <list create="0" delete="0">
+                <field name="date" />
+                <field name="name" />
+                <field name="user_id" optional="show" widget="many2one_avatar_user" />
+                <field name="company_id" optional="show" groups="base.group_multi_company" />
+                <field name="source" optional="hide" />
+                <field name="count_updated" optional="show" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-success="state == 'done'"
+                    decoration-warning="state == 'partial'"
+                    decoration-muted="state == 'reverted'"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="product_cost_from_supplierinfo_batch_view_form" model="ir.ui.view">
+        <field name="name">product.cost.from.supplierinfo.batch.form</field>
+        <field name="model">product.cost.from.supplierinfo.batch</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0" delete="0">
+                <header>
+                    <button
+                        name="action_revert"
+                        string="Revert"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state == 'reverted'"
+                        confirm="Put back the previous cost of these products? The products whose cost changed after this update are left as they are."
+                    />
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="user_id" widget="many2one_avatar_user" />
+                            <field name="date" />
+                            <field name="company_id" groups="base.group_multi_company" />
+                        </group>
+                        <group>
+                            <field name="source" />
+                            <field name="pricelist_id" invisible="not pricelist_id" />
+                            <field name="revert_user_id" invisible="not revert_user_id" />
+                            <field name="revert_date" invisible="not revert_date" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="count_updated" />
+                            <field name="count_unchanged" />
+                            <field name="count_skipped" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Products" name="lines">
+                            <field name="line_ids">
+                                <list
+                                    decoration-muted="reverted"
+                                    decoration-warning="revert_note and not reverted"
+                                >
+                                    <field name="product_id" />
+                                    <field name="default_code" optional="show" />
+                                    <field name="partner_id" optional="show" />
+                                    <field name="supplierinfo_id" optional="hide" />
+                                    <field name="old_cost" />
+                                    <field name="new_cost" />
+                                    <field name="reverted" />
+                                    <field name="revert_note" />
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_cost_from_supplierinfo_batch_view_search" model="ir.ui.view">
+        <field name="name">product.cost.from.supplierinfo.batch.search</field>
+        <field name="model">product.cost.from.supplierinfo.batch</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field
+                    name="line_ids"
+                    string="Product"
+                    filter_domain="[('line_ids.product_id', 'ilike', self)]"
+                />
+                <field
+                    name="line_ids"
+                    string="Vendor"
+                    filter_domain="[('line_ids.partner_id', 'ilike', self)]"
+                />
+                <field name="user_id" />
+                <filter name="my_updates" string="My updates" domain="[('user_id', '=', uid)]" />
+                <separator />
+                <filter name="applied" string="Applied" domain="[('state', '=', 'done')]" />
+                <filter
+                    name="partial"
+                    string="Partially reverted"
+                    domain="[('state', '=', 'partial')]"
+                />
+                <filter name="reverted" string="Reverted" domain="[('state', '=', 'reverted')]" />
+                <separator />
+                <filter name="date" string="Date" date="date" />
+                <group>
+                    <filter name="group_user" string="Applied by" context="{'group_by': 'user_id'}" />
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}" />
+                    <filter name="group_date" string="Date" context="{'group_by': 'date'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="product_cost_from_supplierinfo_batch_action" model="ir.actions.act_window">
+        <field name="name">Cost Updates</field>
+        <field name="res_model">product.cost.from.supplierinfo.batch</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="product_cost_from_supplierinfo_batch_view_search" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No cost update yet</p>
+            <p>Select vendor prices or products in their list and use <i>Take Cost from Vendor Price</i> in the Actions menu. Every update is recorded here and can be reverted.</p>
+        </field>
+    </record>
+
+    <menuitem
+        id="product_cost_from_supplierinfo_batch_menu"
+        name="Cost Updates"
+        parent="purchase.menu_purchase_products"
+        action="product_cost_from_supplierinfo_batch_action"
+        groups="product.group_product_manager"
+        sequence="30"
+    />
+</odoo>
